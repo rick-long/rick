@@ -1,0 +1,40 @@
+
+//////////////////////////////
+安装redis集群地址：https://www.cnblogs.com/mafly/p/redis_cluster.html
+
+
+
+刚开始尝试通过yum安装ruby,结果安装以后发现安装的ruby版本是1.9.7，通过通过gem install rest-lient的时候说ruby版本过低，于是只好从头再来通过源代码编译的方式安装ruby。
+
+一.安装ruby
+
+1.实现去ruby官网下载最新的稳定版本：
+
+https://www.ruby-lang.org/en/downloads/
+
+    2.通过filezila将tar包上传到linux上面
+
+
+
+3.执行以下命令
+
+tar xzvf ruby-2.2.0.tar.gz
+cd ruby-2.2.0
+./configure –prefix=/usr/local/ruby
+make && make instal
+-prefix是将ruby安装到指定目录，安装的时候开始没有使用root用户安装，出现问题，于是切换到root用户执行 make && make install，完成。
+4.添加环境变量
+编辑/etc/profile文件：vim /etc/profile
+添加在最后添加
+export RUBY_HOME=/usr/local/ruby2.2.0
+export PAHT:RUBY_HOME/bin
+保存。
+source /etc/profile
+ruby --version
+二.安装rubygems
+1.下载rubygems: http://www.oschina.net/news/19237/rubygems-v-185
+2.
+tar xzvf rubygems-1.8.5.tgz
+cd rubygems-1.8.5/
+ruby setup.rb
+gem --version
