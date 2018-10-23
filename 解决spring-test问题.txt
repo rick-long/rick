@@ -1,0 +1,15 @@
+java.lang.NoClassDefFoundError: javax/servlet/SessionCookieConfig
+
+缺少项目包
+
+
+<!--解决test问题-->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-servlet_3.0_spec</artifactId>
+			<version>1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!--解决test问题-->
+
+		servlet 版本问题
